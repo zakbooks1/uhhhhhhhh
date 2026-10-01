@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini World Box Sim</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        h1 { margin-bottom: 10px; font-size: 1.5rem; }
+        canvas {
+            border: 2px solid #333;
+            box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+            cursor: pointer;
+        }
+        .controls {
+            margin-top: 15px;
+            display: flex;
+            gap: 10px;
+        }
+        button {
+            background-color: #1f1f1f;
+            color: white;
+            border: 1px solid #444;
+            padding: 8px 16px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        button:hover { background-color: #333; }
+    </style>
+</head>
+<body>
+
+    <h1>Mini World Simulation</h1>
+    <canvas id="worldCanvas" width="600" height="600"></canvas>
+    
+    <div class="controls">
+        <button onclick="setTool('human')">Spawn Human</button>
+        <button onclick="setTool('food')">Spawn Food</button>
+        <button onclick="setTool('fire')">Spawn Fire</button>
+        <button onclick="clearWorld()">Clear World</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
